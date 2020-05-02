@@ -1,22 +1,88 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const viewRoutes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/recipe",
+    name: 'recipe',
+    component: () => import('../views/user/recipe.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/create",
+    name: "create",
+    component: () => import('../views/user/create.vue'),
+    meta: {
+      isLogin: true
+    }
+  },
+  {
+    path: "/edit",
+    name: "edit",
+    component: () => import('../views/user/edit.vue'),
+    meta: {
+      isLogin: true
+    }
+  },
+  {
+    path: "/space",
+    name: 'space',
+    component: () => import('../views/user/space.vue'),
+    redirect: {
+      name: 'works'
+    },
+    meta: {
+      isLogin: true
+    },
+    children: [
+      {
+        path: '/works',
+        name: 'works',
+        import: () => import('../views/user/works.vue')
+      },
+      {
+        path: '/fans',
+        name: 'fans',
+        import: () => import('../views/user/fans.vue')
+      },
+      {
+        path: '/collection',
+        name: 'collection',
+        import: () => import('../views/user/collection.vue')
+      }
+    ]
+  }
+]
+
+
+const routes = [
+  {
+    path: "/",
+    name: 'home',
+    component: () => import('../views/home.vue'),
+    meta: {
+      title: '首页'
+    },
+    children: [
+      ...viewRoutes,
+    ]
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import('../views/login/login.vue')
+  },
+  {
+    path: "*",
+    redirect: {
+      name: 'notFound'
+    }
+  },
+  {
+    path: "/404",
+    name: "notFound",
+    component: () => import("../views/404.vue")
   }
 ]
 
