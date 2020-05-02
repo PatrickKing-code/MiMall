@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;//方便设计稿取值使用
+  }
+  html,body {
+    position:relative;
+    width:100%;
+    height:100%;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    scroll-behavior:smooth;
+  }
+  #app {
+    width:100%;
+    height:100%;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: block;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+  }
+   
+  input {
+    outline: none;
+    border: none;
+    background-color: #fff;
+  }
+  .overflow {
+    overflow: hidden;
+  }
+  .clear {
+    clear: both;
+    height: 1px;
+    width: 100%;
+  }
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+   
+  .alignLeft {
+    text-align: left;
+  }
+  .alignCenter {
+    text-align: center;
+  }
+  .alignRight {
+    text-align: right;
+  }
+   
+  .inline {
+    display: inline-block;
+  }
+   
+  .cursor {
+    cursor: pointer;
+  }
+   
+  .blod {
+    font-weight: bold;
+  }
+   
+  //上下左右居中
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+   
+  /*超出省略号--需要设置宽度*/
+  .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+   
+  /* 滚动条样式 */
+  ::-webkit-scrollbar
+  {
+    width: 0.1rem;
+    height: 0.1rem;
+    background-color: #F5F5F5;
+  }
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb
+  {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.3);
+    background-color: #dedfe0;
+    border-radius:0.1rem;
+  }
+  /*滑块效果*/
+  ::-webkit-scrollbar-thumb:hover
+  {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #dedfe0;
+  }
+  /*IE滚动条颜色*/
+  html {
+    scrollbar-face-color:#dedfe0;/*滚动条颜色*/
+    scrollbar-highlight-color:#000;
+    scrollbar-3dlight-color:#000;
+    scrollbar-darkshadow-color:#000;
+    scrollbar-Shadow-color:#adadad;/*滑块边色*/
+    scrollbar-arrow-color:rgba(0,0,0,0.4);/*箭头颜色*/
+    scrollbar-track-color:#eeeeee;/*背景颜色*/
+  }
