@@ -3,10 +3,12 @@ import './plugins/axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import service from './utils/request'
 import './plugins/element.js'
 import './style/reset.scss' 
 
 Vue.config.productionTip = false
+Vue.prototype.service = service
 
 new Vue({
   router,

@@ -7,6 +7,7 @@
 <script>
 // 如果后台获取不到你给他的token的话那你就需要设置一个response header 属性名为 Access-Control-Allow-Credentials: true
 import axios from "axios";
+import storage from './storage/index'
 export default {
   name: "app",
   components: {
@@ -16,6 +17,7 @@ export default {
     axios.get(url).then(res => {
       console.log(res);
     });
+    // storage.setItem('bbb', { 'c': 1}, 'user')
   }
 };
 </script>
