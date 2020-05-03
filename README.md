@@ -1,4 +1,4 @@
-# food-share
+# mi
 
 ## Project setup
 ```

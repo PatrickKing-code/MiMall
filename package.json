@@ -1,5 +1,5 @@
 {
-  "name": "food-share",
+  "name": "mi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,10 +18,10 @@
     "@vue/cli-plugin-router": "~4.3.0",
     "@vue/cli-plugin-vuex": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
-    "axios": "^0.19.2",
-    "babel-plugin-component": "^1.1.1",
+    "axios": "^0.18.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-element": "~1.0.1",
     "vue-template-compiler": "^2.6.11"
   }
