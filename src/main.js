@@ -6,6 +6,7 @@ import store from './store'
 import service from './utils/request'
 import './plugins/element.js'
 import './style/reset.scss' 
+import './style/config.scss'
 
 Vue.config.productionTip = false
 Vue.prototype.service = service
