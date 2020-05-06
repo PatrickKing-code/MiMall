@@ -1,6 +1,8 @@
 <template>
   <div>
-      首页
+      <div>
+        index
+      </div>
   </div>
 </template>
 

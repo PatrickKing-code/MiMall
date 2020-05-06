@@ -1,7 +1,8 @@
 <template>
   
   <div>
-      cart
+      子路由
+      <router-view></router-view>
   </div>
 </template>
 

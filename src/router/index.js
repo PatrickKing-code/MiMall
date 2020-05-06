@@ -8,6 +8,9 @@ Vue.use(VueRouter)
       path: "/",
       name: "home",
       component: ()=> import('../views/home.vue'),
+      redirect: {
+        name: 'index'
+      },
       children: [
         {
           path: "/index",
@@ -30,18 +33,21 @@ Vue.use(VueRouter)
       path: '/cart',
       name: 'cart',
       component: ()=> import('../views/cart.vue'),
+      redirect: {
+        name: 'order-list'
+      },
       children: [
         {
-          path: '/list',
+          path: 'list',
           name: 'order-list',
           component: ()=> import('../views/orderList.vue')
         },
         {
-          path: '/confirm',
+          path: 'confirm',
           name: 'order-confirm',
           component: ()=> import('../views/orderConfirm.vue')
         },{
-          path: '/pay',
+          path: 'pay',
           name: 'order-pay',
           component: ()=> import('../views/orderPay.vue')
         }
@@ -50,7 +56,7 @@ Vue.use(VueRouter)
   ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
