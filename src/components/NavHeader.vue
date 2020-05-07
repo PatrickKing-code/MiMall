@@ -121,7 +121,7 @@ export default {
       display: inline-block;
       padding-left: 200px;
       width: 640px;
-      .item-menu {kk
+      .item-menu {
         display: inline-block;
         color: $colorB;
         font-weight: bold;

@@ -1,8 +1,9 @@
 module.exports = {
+  publicPath: '/',
+  outputDir: process.env.outputDir,
   devServer: {
     port: 8080,
     open: true,
-    hotOnly: true,
     proxy: {
       "/api": {
         target: "https://www.imooc.com",
