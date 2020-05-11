@@ -11,12 +11,6 @@
 export default {
   name: "app",
   components: {
-  },
-  mounted() {
-    // let url = "https://www.easy-mock.com/mock/5eae25a8a9af2438fc69ef07/api/";
-    // axios.get(url).then(res => {
-    //   console.log(res);
-    // });
   }
 };
 </script>
