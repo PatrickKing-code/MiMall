@@ -27,7 +27,17 @@
           </div>
           <div class="item-menu">
             <span>红米手机</span>
-            <div class="children"></div>
+            <div style="display: none; height: 0;" class="children">
+              <ul>
+                <li class="product" v-for="item in headerList" :key="item.id">
+                  <a href="" target="_blank">
+                    <div class="pro-img"><img :src="item.imgUrl" alt="" /></div>
+                    <div class="pro-name">{{ item.proName }}</div>
+                    <div class="pro-price">{{ item.proPrice }}</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="item-menu">
             <span>电视</span>
@@ -36,7 +46,7 @@
         </div>
         <div class="header-bottom-search">
           <div class="wrapper">
-            <input type="text" name="keyword">
+            <input type="text" name="keyword" />
             <a href="javascript:;">icon</a>
           </div>
         </div>
@@ -47,7 +57,49 @@
 
 <script>
 export default {
-  name: "nav-header"
+  name: "nav-header",
+  data() {
+    return {
+      headerList: [
+        {
+          imgUrl:
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=160&h=110&f=webp&q=90",
+          proName: "小米C99",
+          proPrice: "1999元",
+        },
+        {
+          imgUrl:
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=160&h=110&f=webp&q=90",
+          proName: "小米C99",
+          proPrice: "1999元",
+        },
+        {
+          imgUrl:
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=160&h=110&f=webp&q=90",
+          proName: "小米C99",
+          proPrice: "1999元",
+        },
+        {
+          imgUrl:
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=160&h=110&f=webp&q=90",
+          proName: "小米C99",
+          proPrice: "1999元",
+        },
+        {
+          imgUrl:
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=160&h=110&f=webp&q=90",
+          proName: "小米C99",
+          proPrice: "1999元",
+        },
+        {
+          imgUrl:
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=160&h=110&f=webp&q=90",
+          proName: "小米C99",
+          proPrice: "1999元",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -78,6 +130,7 @@ export default {
 .header-bottom-main {
   .header-bottom-container {
     width: $min-width;
+    position: relative;
     margin: 0 auto;
     height: 112px;
     display: flex;
@@ -131,8 +184,42 @@ export default {
         span {
           cursor: pointer;
         }
-        &:hover {
-
+        // &:hover {
+        //   color: $colorA;
+        //   .children {
+        //     transition: height 1s;
+        //     height: 220px;
+        //   }
+        // }
+        .children {
+          position: absolute;
+          // top: 112px;
+          left: 0;
+          width: 1226px;
+          border: 1px solid #e5e5e5;
+          box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.11);
+          .product {
+            float: left;
+            width: 16.6%;
+            height: 220px;
+            font-size: 12px;
+            img {
+              height: 111px;
+              margin-top: 26px;
+            }
+            .pro-img {
+              height: 137px;
+            }
+            .pro-name {
+              color: #b0b0b0;
+              font-weight: bold;
+              height: 30px;
+            }
+            .pro-price {
+              color: red;
+              height: 30px;
+            }
+          }
         }
       }
     }
@@ -156,7 +243,7 @@ export default {
           display: inline-block;
           width: 30px;
           height: 30px;
-          background: url('../assets/images/r13.png') no-repeat center;
+          background: url("../assets/images/r13.png") no-repeat center;
           background-size: contain;
           padding-left: 20px;
         }
