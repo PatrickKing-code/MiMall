@@ -1,23 +1,22 @@
 <template>
   <div>
-      <NavHeader />
+      <nav-header></nav-header>
       <router-view></router-view>
-      <NavFooter />
+      <nav-footer></nav-footer>
   </div>
 </template>
 
 <script>
-import NavHeader from '../components/NavHeader'
-import NavFooter from '../components/NavFooter'
+import NavHeader from '../components/NavHeader.vue'
+import NavFooter from '../components/NavFooter.vue'
 export default {
-    name: "home",
-    components: {
-        NavFooter,
-        NavHeader
-    }
-}
+  name: "home",
+  components: {
+      NavHeader,
+      NavFooter
+  }
+};
 </script>
 
 <style>
-
 </style>

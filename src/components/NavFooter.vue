@@ -1,6 +1,6 @@
 <template>
   <div>
-      <!-- nav footer -->
+      nav-footer
   </div>
 </template>
 

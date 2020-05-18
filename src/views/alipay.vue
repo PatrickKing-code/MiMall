@@ -1,5 +1,4 @@
 <template>
-  
   <div>
       alipay
   </div>
@@ -7,7 +6,7 @@
 
 <script>
 export default {
-
+    name: "alipay"
 }
 </script>
 

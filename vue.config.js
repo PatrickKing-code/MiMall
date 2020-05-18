@@ -1,23 +1,17 @@
 module.exports = {
-  publicPath: '/',
+  publicPath: "/",
   outputDir: process.env.outputDir,
   devServer: {
+    host: "localhost",
     port: 8080,
-    open: true,
     proxy: {
       "/api": {
-        target: "https://mall-pre.springboot.cn",
+        target: "https://www.imooc.com",
+        // 是否将主机头设置成目标地址
         changeOrigin: true,
         pathRewrite: {
           "/api": "",
         },
-      },
-    },
-  },
-  css: {
-    loaderOptions: {
-      sass: {
-        prependData: `@import "./src/style/config.scss";`,
       },
     },
   },

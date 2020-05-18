@@ -1,14 +1,12 @@
 <template>
-  
   <div>
-      子路由
-      <router-view></router-view>
+      cart
   </div>
 </template>
 
 <script>
 export default {
-
+    name:"cart "
 }
 </script>
 
