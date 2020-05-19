@@ -1,0 +1,47 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{
+    margin: 0;
+}   
+ol,ul{
+    margin: 0; 
+    padding: 0;
+}
+li{
+    list-style: none
+}
+input,button,textarea{
+    padding: 0;
+}
+/*另外：button和input本身有2px的边框，textarea和select本身有1px的边框，根据实际情况调整，或是去掉边框*/
+table{
+    /*为表格设置合并边框模型*/
+    border-collapse: collapse;
+    /*设置表格边框之间的空白*/
+    border-spacing: 0px;
+}
+/*去掉a链接的下划线*/
+a{ 
+    text-decoration: none;
+}
+a:hover{ 
+    text-decoration: none;
+}
+/*个别浏览器对语义化标签的兼容*/
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+h1,h2,h3,h4,h5,h6,em,i,b,cite {
+    /*字体样式不加粗*/
+    font-weight: normal;
+    font-style: normal;
+}
+a,input,button {
+      /* 清除点击阴影 */
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
+body * {
+    /* 选中文字设置 */
+    -weibkit-user-select: none;
+     /* 禁止文字缩放 */
+    -webkit-text-size-adjust: 100%;
+    font-family: Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
